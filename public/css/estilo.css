@@ -1,0 +1,20 @@
+
+
+
+footer.rodape{
+    display: flex;
+    grid-area: rodape;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(3, 16, 3, 0.453);
+    color: white;
+    font-size: 1.2rem;
+    position: fixed; /* ou position: absolute; */
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 40px;
+} 
+
+
+
