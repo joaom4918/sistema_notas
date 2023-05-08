@@ -3,7 +3,9 @@
 
 <h1>Listagem</h1>
 
-<table class="table">
+
+
+<table class="table table-striped">
 
 <thead>
     <th>Id</th>
@@ -28,7 +30,10 @@
         <td>{{$registro->nota3}}</td>
         <td>{{$registro->resultado}}</td>
        
-        <td><a href="{{route('admin.boletim.excluir',$registro->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"> </i></a></td>
+        <td><a href="{{route('admin.boletim.excluir',$registro->id)}}" class="btn btn-danger"><i class="fas fa-trash-alt"></i></a>
+            <a href="{{route('admin.boletim.editar',$registro->id)}}" class="btn btn-primary"><i class="fas fa-edit">editar</i></a>
+        </td>
+        
 
         
     </tr>

@@ -17,4 +17,10 @@ Route::get('admin/boletim/adicionar',['as'=>'admin.boletim.adicionar','uses'=>"B
 Route::post('admin/boletim/salvar',['as'=>'admin.boletim.salvar','uses'=>"BoletimController@salvar"]);
 Route::get('admin/boletim/listagem',['as'=>'admin.boletim.listagem','uses'=>"BoletimController@listagem"]);
 Route::get('admin/boletim/excluir/{id}',['as'=>'admin.boletim.excluir','uses'=>"BoletimController@excluir"]);
+Route::get('admin/boletim/editar/{id}',['as'=>'admin.boletim.editar','uses'=>"BoletimController@editar"]);
+Route::put('admin/boletim/atualizar/{id}',['as'=>'admin.boletim.atualizar','uses'=>"BoletimController@atualizar"]);
+
+
+Auth::routes();
+Route::get('/',['as'=>'site.home','uses'=>"HomeController@index"]);
 

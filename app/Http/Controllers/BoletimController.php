@@ -49,5 +49,20 @@ class BoletimController extends Controller
 
       return redirect()->route('admin.boletim.listagem');
     }
+
+    public function editar($id){
+
+        $registro=Boletim::find($id);
+
+        return view('admin.boletim.editar',compact('registro'));
+    }
+
+    public function atualizar(Request $req,$id){
+        $dados=$req->all();
+        Boletim::find($id)->update($dados); 
+
+        return redirect()->route('site.home');
+
+    }
     
 }

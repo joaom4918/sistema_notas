@@ -16,12 +16,28 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('admin.boletim.listagem')}}">Listagem</a>
           </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{Auth::user()->name}}
+            </a>
+            <ul class="dropdown-menu">
+              <li>   <a href="{{ url('/logout') }}"
+                onclick="event.preventDefault();
+                         document.getElementById('logout-form').submit();">
+               sair
+            </a>
+
+            <form id="logout-form" action="{{ url('/logout') }}" method="POST" style="display: none;">
+                {{ csrf_field() }}
+            </form></li>
+             
+            </ul>
+          </li>
+          
         
         </ul>
-        <form class="d-flex" role="search">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
-        </form>
+      
       </div>
     </div>
   </nav>
