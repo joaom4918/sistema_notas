@@ -18,5 +18,20 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+          // Máscara de CPF
+          $('input[name="cpf"]').mask('000.000.000-00');
+        
+          // Máscara de telefone
+          $('input[name="telefone"]').mask('(00) 0000-0000'); 
+        });
+    </script>
+    
+    
+
     <title>Document</title>
 </head>

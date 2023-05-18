@@ -14,14 +14,16 @@ class CreateBoletimsTable extends Migration
     public function up()
     {
         Schema::create('boletims', function (Blueprint $table) {
+            
             $table->increments('id');
-            $table->string('nome');
+            $table->unsignedInteger('aluno_id');
             $table->string('materia');
             $table->integer('nota1');
             $table->integer('nota2');
             $table->integer('nota3');
             $table->integer('resultado');
-         
+            $table->foreign('aluno_id')->references('id')->on('alunos'); 
+
             $table->timestamps();
         });
     }

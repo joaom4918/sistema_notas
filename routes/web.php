@@ -24,3 +24,8 @@ Route::put('admin/boletim/atualizar/{id}',['as'=>'admin.boletim.atualizar','uses
 Auth::routes();
 Route::get('/',['as'=>'site.home','uses'=>"HomeController@index"]);
 
+
+###################################################
+
+Route::get('admin/aluno/adicionar',['as'=>'admin.aluno.adicionar','uses'=>"AlunoController@adicionar"]);
+Route::post('admin/aluno/salvar',['as'=>'admin.aluno.salvar','uses'=>"AlunoController@salvar"]);

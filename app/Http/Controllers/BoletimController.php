@@ -3,14 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Boletim;
+use App\Aluno;
 use Illuminate\Http\Request;
+
 
 class BoletimController extends Controller
 {
     
     public function adicionar(){
 
-        return view('admin.boletim.adicionar');
+        $alunos=Aluno::all();
+        return view('admin.boletim.adicionar',compact('alunos'));
     }
 
     public function salvar(Request $req)

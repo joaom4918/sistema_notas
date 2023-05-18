@@ -12,6 +12,9 @@
           <li class="nav-item">
             <a class="nav-link" href="{{route('admin.boletim.adicionar')}}">Adicionar nota</a>
           </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.aluno.adicionar')}}">Adicionar Aluno</a>
+          </li>
 
           <li class="nav-item">
             <a class="nav-link" href="{{route('admin.boletim.listagem')}}">Listagem</a>
