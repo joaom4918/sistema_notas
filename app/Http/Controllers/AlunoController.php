@@ -21,4 +21,19 @@ class AlunoController extends Controller
 
      return redirect()->route('site.home');
     }
+
+    public function listagem_alunos(){
+
+        $alunos=Aluno::all();
+
+    return view('admin.aluno.listagem_alunos',compact('alunos'));
+    }
+
+    public function excluir(Request $req, $id){
+
+        $dados=$req->all();
+        Aluno::find($id)->delete($dados);
+
+        return redirect()->route('site.home');
+    }
 }

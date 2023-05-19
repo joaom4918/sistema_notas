@@ -29,3 +29,5 @@ Route::get('/',['as'=>'site.home','uses'=>"HomeController@index"]);
 
 Route::get('admin/aluno/adicionar',['as'=>'admin.aluno.adicionar','uses'=>"AlunoController@adicionar"]);
 Route::post('admin/aluno/salvar',['as'=>'admin.aluno.salvar','uses'=>"AlunoController@salvar"]);
+Route::get('admin/aluno/listagem_alunos',['as'=>'admin.aluno.listagem_alunos','uses'=>"AlunoController@listagem_alunos"]);
+Route::get('admin/aluno/excluir/{id}',['as'=>'admin.aluno.excluir','uses'=>"AlunoController@excluir"]);

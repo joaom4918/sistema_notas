@@ -17,7 +17,10 @@
           </li>
 
           <li class="nav-item">
-            <a class="nav-link" href="{{route('admin.boletim.listagem')}}">Listagem</a>
+            <a class="nav-link" href="{{route('admin.boletim.listagem')}}">Listagem de notas</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('admin.aluno.listagem_alunos')}}">Listagem</a>
           </li>
 
           <li class="nav-item dropdown">
