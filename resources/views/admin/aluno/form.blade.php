@@ -1,6 +1,6 @@
-<input type="text" class="form-control" name="nome" placeholder="Digite o nome do aluno"> <br>
+<input type="text" class="form-control" name="nome" value="{{isset($registros->nome)?$registros->nome:''}}" placeholder="Digite o nome do aluno"> <br>
 <label for="turma">Turma</label><br>
-<select name="turma" >
+<select name="turma" value="{{isset($registros->turma)?$registros->turma:''}}" >
     <option value="1°ano">1°ano</option>
     <option value="2°ano">2°ano</option>
     <option value="3°ano">3°ano</option>
@@ -16,10 +16,10 @@
 </select>
 <br><br>
 <label for="data_nas">Data de Nasimento</label>
-<input type="date" class="form-control" name="data_nas" ><br>
-<input type="text" class="form-control" placeholder="Informe o numero do cpf" name="cpf"><br>
-<input type="text" class="form-control" placeholder="Informe seu endereço" name="endereco"><br>
-<input type="number" class="form-control" placeholder="Informe numero" name="numero"><br>
-<input type="text" class="form-control" placeholder="complemento opcional" name="complemento"><br>
-<input type="text" class="form-control" placeholder="telefone" name="telefone"><br>
+<input type="date" class="form-control" name="data_nas" value="{{isset($registros->data_nas)?$registros->data_nas:''}}" ><br>
+<input type="text" class="form-control" placeholder="Informe o numero do cpf" name="cpf" value="{{isset($registros->cpf)?$registros->cpf:''}}"><br>
+<input type="text" class="form-control" placeholder="Informe seu endereço" name="endereco" value="{{isset($registros->endereco)?$registros->endereco:''}}"><br>
+<input type="number" class="form-control" placeholder="Informe numero" name="numero" value="{{isset($registros->numero)?$registros->numero:''}}"><br>
+<input type="text" class="form-control" placeholder="complemento opcional" name="complemento" value="{{isset($registros->complemento)?$registros->complemento:''}}"><br>
+<input type="text" class="form-control" placeholder="telefone" name="telefone" value="{{isset($registros->telefone)?$registros->telefone:''}}"><br>
 

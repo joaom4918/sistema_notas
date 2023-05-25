@@ -18,25 +18,32 @@ class BoletimController extends Controller
 
     public function salvar(Request $req)
     {
+        $aluno_id = $req->input('aluno_id');
+
+        if (!$aluno_id) {
+            return redirect()->back()->with('error', 'Selecione um aluno válido.');
+        }
         
-        $nome = $req->input('nome');
+        
         $materia = $req->input('materia');
         $nota1 = $req->input('nota1');
         $nota2 = $req->input('nota2');
         $nota3 = $req->input('nota3');
-        $resultado = ($nota1 + $nota2 + $nota3)/3; 
+        $resultado = ($nota1 + $nota2 + $nota3) / 3;
     
         Boletim::create([
-            'nome' => $nome,
+            
             'materia' => $materia,
             'nota1' => $nota1,
             'nota2' => $nota2,
             'nota3' => $nota3,
             'resultado' => $resultado,
-        ]); 
+            'aluno_id' => $aluno_id, // Atribuir o valor do campo "aluno_id"
+        ]);
     
         return redirect()->route('site.home');
     }
+    
 
 
     public function listagem(){
@@ -67,5 +74,7 @@ class BoletimController extends Controller
         return redirect()->route('site.home');
 
     }
+
+  
     
 }

@@ -6,7 +6,7 @@
 
 
 
-    @include('layout.includes.rodape')
+    @include('layout.includes.rodape') 
 
 </body>
 

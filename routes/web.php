@@ -31,3 +31,10 @@ Route::get('admin/aluno/adicionar',['as'=>'admin.aluno.adicionar','uses'=>"Aluno
 Route::post('admin/aluno/salvar',['as'=>'admin.aluno.salvar','uses'=>"AlunoController@salvar"]);
 Route::get('admin/aluno/listagem_alunos',['as'=>'admin.aluno.listagem_alunos','uses'=>"AlunoController@listagem_alunos"]);
 Route::get('admin/aluno/excluir/{id}',['as'=>'admin.aluno.excluir','uses'=>"AlunoController@excluir"]);
+Route::get('admin/aluno/editar/{id}',['as'=>'admin.aluno.editar','uses'=>"AlunoController@editar"]);
+Route::put('admin/aluno/atualizar/{id}',['as'=>'admin.aluno.atualizar','uses'=>"AlunoController@atualizar"]);
+
+##################################################
+
+Route::get('admin/aluno/lista_1ano',['as'=>'admin.aluno.lista_1ano','uses'=>"AlunoController@lista_1ano"]);
+

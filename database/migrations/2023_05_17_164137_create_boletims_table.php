@@ -16,13 +16,14 @@ class CreateBoletimsTable extends Migration
         Schema::create('boletims', function (Blueprint $table) {
             
             $table->increments('id');
-            $table->unsignedInteger('aluno_id');
+            $table->unsignedInteger('aluno_id'); 
             $table->string('materia');
             $table->integer('nota1');
             $table->integer('nota2');
             $table->integer('nota3');
+            $table->foreign('aluno_id')->references('id')->on('alunos');
             $table->integer('resultado');
-            $table->foreign('aluno_id')->references('id')->on('alunos'); 
+           
 
             $table->timestamps();
         });

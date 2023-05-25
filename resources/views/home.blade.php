@@ -1,26 +1,24 @@
 @include('layout.base')
 
-<h1 class="m-3">Resultado Alunos</h1>
+<h1 class="m-3">Bem vindo ao Sistema</h1>
+
 <div class="container mt-5">
     <div class="main">
 
-        <table class="table">
-
-            <thead>
-                <th>Nome</th>
-                <th>Media final </th>
-            </thead>
-
-            <tbody>
-                @foreach ($registros as $registro)
-                    <tr>
-                        <td>{{$registro->nome}}</td>
-                        <td>{{$registro->resultado}}</td>
-
-                    </tr>
-                @endforeach
+      <ul>
+        <li><a href="{{route('admin.aluno.lista_1ano')}}">1°ano</a></li>
+        <li><a href="#">2°ano</a></li>
+        <li><a href="#">3°ano</a></li>
+        <li><a href="#">4°ano</a></li>
+        <li><a href="#">5°ano</a></li>
+        <li><a href="#">6°ano</a></li>
+        <li><a href="#">7°ano</a></li>
+        <li><a href="#">8°ano</a></li>
+        <li><a href="#">9°ano</a></li>
+        <li><a href="#">1°ano ensino medio</a></li>
+        <li><a href="#">2°ano ensino medio</a></li>
+        <li><a href="#">3°ano ensino medio</a></li>
+      </ul>
+     
     </div>
-    </tbody>
-    </table>
-
 </div>

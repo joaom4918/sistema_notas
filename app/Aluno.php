@@ -11,4 +11,12 @@ class Aluno extends Model
         'nome', 'turma', 'data_nas','cpf','endereco','numero','complemento','telefone'
     ];
 
+    //um boletim pode conter varios alunos
+
+    public function boletim(){
+
+        return $this->hasMany('App\Boletim','aluno_id');
+    }
+  
+
 }
